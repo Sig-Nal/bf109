@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <sim>
+        <model>
+            <livery>
+                <variant type="string">Independent State of Croatia</variant>
+                
+                <material>
+                    <cowlunderside>
+                        <texture>Liveries/bf109-10.png</texture>
+                    </cowlunderside>
+                    <fuselage>
+                        <texture>Liveries/bf109-10.png</texture>
+                    </fuselage>
+                    <fwdband>
+                        <texture>Liveries/bf109-10.png</texture>
+                    </fwdband>
+                    <prophub>
+                        <texture>Liveries/bf109-10.png</texture>
+                    </prophub>
+                    <rearband>
+                        <colour>
+                            <diffuse>
+                                <red>0.31</red>
+                                <green>0.31</green>
+                                <blue>0.18</blue>
+                            </diffuse>
+                            <ambient>
+                                <red>0.31</red>
+                                <green>0.31</green>
+                                <blue>0.18</blue>
+                            </ambient>
+                            <specular>
+                                <red>0.31</red>
+                                <green>0.31</green>
+                                <blue>0.18</blue>
+                            </specular>
+                            <emission>
+                                <red>0.0</red>
+                                <green>0.0</green>
+                                <blue>0.0</blue>
+                            </emission>
+                            <transparency>
+                                <alpha>1.0</alpha>
+                            </transparency>	
+                            <shininess>2</shininess>
+                        </colour>
+                    </rearband>
+                    <rudder>
+                        <texture>Liveries/bf109-10.png</texture>		
+                    </rudder>
+                    <wingtip>
+                        <texture>Liveries/bf109-10.png</texture>		
+                    </wingtip>
+                </material>
+            </livery>
+        </model>
+
+        <rendering>
+            <refl_correction type="string">-0.6</refl_correction>
+        </rendering>
+
+    </sim>
+  
+</PropertyList>

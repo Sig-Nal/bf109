@@ -1,0 +1,81 @@
+<?xml version="1.0" ?> 
+  <PropertyList> 
+    <path>pedals.ac</path> 
+ <animation>
+  <type>translate</type>
+  <object-name>LeftPedal</object-name>
+  <object-name>LeftPedalSocket</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>0.05</factor>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>LeftPedal</object-name>
+  <property>controls/gear/brake-left</property>
+  <factor>-9</factor>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>3.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+ </animation>
+
+ <animation>
+  <type>translate</type>
+  <object-name>RightPedal</object-name>
+  <object-name>RightPedalSocket</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>-0.05</factor>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>RightPedal</object-name>
+  <property>controls/gear/brake-right</property>
+  <factor>-9</factor>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>3.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>RudderBar</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>18</factor>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+ </animation>
+
+</PropertyList>
