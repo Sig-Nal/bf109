@@ -8,7 +8,7 @@ YASim aerodynamic model for a Messerschmitt Bf 109
 -->
 
 <!-- Weight of everything but fuel  -->
-<airplane mass="6502">
+<airplane mass="6502" version="YASIM_VERSION_CURRENT">
 
 <!-- Approach configuration -->
 <approach speed="77" aoa="8">
