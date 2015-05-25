@@ -151,6 +151,8 @@ February 2006,  Detlef Faber
  			    <float n="9" alias="/controls/engines/engine[0]/cowl-flaps-norm"/>
  			    <float n="10" alias="/controls/canopy/position-norm"/>
  			    <float n="11" alias="/controls/canopy/release"/>
+ 			    <float n="12" alias="/sim/model/crew/pilot/visible"/>
+ 			    <float n="13" alias="/sim/current-view/view-number"/>
 
 				<string>0</string>
 				<string n="1">0</string>
