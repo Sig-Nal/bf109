@@ -292,7 +292,7 @@
   <type>rotate</type>
   <object-name>canopy</object-name>
 	<object-name>canopyglass</object-name>
-  <property>controls/canopy/position-norm</property>
+  <property>sim/multiplay/generic/float[10]</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -321,7 +321,7 @@
 	<object-name>canopyglass</object-name>
   <condition>
    <equals>
-    <property>controls/canopy/release</property>
+    <property>sim/multiplay/generic/float[11]</property>
     <value>false</value>
    </equals>
   </condition>

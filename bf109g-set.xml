@@ -150,6 +150,7 @@ February 2006,  Detlef Faber
  			    <float n="8" alias="/gear/tailhook/position-norm"/>
  			    <float n="9" alias="/controls/engines/engine[0]/cowl-flaps-norm"/>
  			    <float n="10" alias="/controls/canopy/position-norm"/>
+ 			    <float n="11" alias="/controls/canopy/release"/>
 
 				<string>0</string>
 				<string n="1">0</string>
