@@ -162,7 +162,7 @@ February 2006,  Detlef Faber
 			<int n="3" alias="/sim/model/lights/strobe/state"/>
 			<int n="4" alias="/controls/lighting/nav-lights"/>
 			<int n="5" alias="/controls/lighting/landing-lights"/>
-
+			<int n="6" alias="/controls/switches/landing-light"/>
 
 		</generic>
 	</multiplay>

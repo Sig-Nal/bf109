@@ -45,7 +45,7 @@
     <type>select</type>
     <object-name>Light</object-name>
     <condition>
-      <property>controls/lighting/nav-lights</property>
+   <property>sim/multiplay/generic/int[4]</property>
     </condition>
   </animation>
 
