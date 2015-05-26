@@ -14,7 +14,7 @@ February 2006,  Detlef Faber
   <description>Messerschmitt BF-109 G14</description>
   <author>Detlef Faber</author>
   <status>production</status>
-  <version>2.1</version>
+  <version>2.2</version>
  <rating>
     <FDM type="int">4</FDM>
     <systems type="int">4</systems>
@@ -153,6 +153,8 @@ February 2006,  Detlef Faber
  			    <float n="11" alias="/controls/canopy/release"/>
  			    <float n="12" alias="/sim/model/crew/pilot/visible"/>
  			    <float n="13" alias="/sim/current-view/view-number"/>
+ 			    <float n="18" alias="/gear/gear[2]/caster-angle-deg"/>
+ 			    <float n="19" alias="/controls/flight/elevator"/>
 
 				<string>0</string>
 				<string n="1">0</string>

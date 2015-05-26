@@ -544,7 +544,7 @@
 <animation> 
       <type>rotate</type>
       <object-name>tailwheel</object-name>
-      <property>gear/gear[2]/caster-angle-deg</property>
+    <property>sim/multiplay/generic/float[18]</property>
       <factor>1</factor>
       <center> 
         <x-m>7.62</x-m>
