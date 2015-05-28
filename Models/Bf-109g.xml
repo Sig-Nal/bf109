@@ -495,7 +495,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Rudder</object-name>
-  <property>surface-positions/rudder-pos-norm</property>
+    <property>sim/multiplay/generic/float[20]</property>
   <factor>30.0</factor>
 
   <center>
@@ -782,6 +782,7 @@
     <object-name>fwdband</object-name>
     <property-base>sim/model/livery/material/fwdband</property-base>
     <texture-prop>texture</texture-prop>
+
     <texture>bf109-1.png</texture>
   </animation>
   <animation>
@@ -1091,6 +1092,7 @@
           <and> 
                 <not>
                     <property>/sim/rendering/rembrandt/enabled</property>
+
                 </not>
 				    <property>controls/lighting/landing-light</property>
 
