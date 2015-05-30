@@ -455,7 +455,7 @@
  <animation>
   <type>rotate</type>
   <object-name>rightaileron</object-name>
-  <property>surface-positions/right-aileron-pos-norm</property>
+  <property>controls/flight/aileron</property>
   <factor>-15.0</factor>
 
   <center>
@@ -476,7 +476,7 @@
  <animation>
   <type>rotate</type>
   <object-name>LeftAileron</object-name>
-   <property>surface-positions/left-aileron-pos-norm</property>
+   <property>controls/flight/aileron</property>
   <factor>15.0</factor>
 
   <center>
