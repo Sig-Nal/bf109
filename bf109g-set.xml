@@ -155,10 +155,6 @@ February 2006,  Detlef Faber
  			    <float n="13" alias="/sim/current-view/view-number"/>
  			    <float n="18" alias="/gear/gear[2]/caster-angle-deg"/>
  			    <float n="19" alias="/controls/flight/elevator"/>
- 			    <float n="20" alias="/surface-positions/rudder-pos-norm"/>
- 			    <float n="21" alias="/controls/flight/aileron"/>
- 			    <float n="22" alias="/surface-positions/elevator-pos-norm"/>
- 			    <float n="23" alias="/surface-positions/flap-pos-norm"/>
 
 				<string>0</string>
 				<string n="1">0</string>
