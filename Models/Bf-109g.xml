@@ -386,6 +386,7 @@
    <y1-m>-1.407</y1-m>
    <z1-m>-0.256</z1-m>
 
+
    <x2-m>3.759</x2-m>
    <y2-m>-0.596</y2-m>
    <z2-m>-0.313</z2-m>
@@ -454,7 +455,7 @@
  <animation>
   <type>rotate</type>
   <object-name>rightaileron</object-name>
-  <property>controls/flight/aileron</property>
+        <property>surface-positions/right-aileron-pos-norm</property>
   <factor>-15.0</factor>
 
   <center>
@@ -475,7 +476,7 @@
  <animation>
   <type>rotate</type>
   <object-name>LeftAileron</object-name>
-   <property>controls/flight/aileron</property>
+        <property>surface-positions/left-aileron-pos-norm</property>
   <factor>15.0</factor>
 
   <center>
