@@ -1,0 +1,765 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Bf 109 simulation config.
+
+February 2006,  Detlef Faber
+************************************************************************
+-->
+
+<PropertyList>
+
+ <sim>
+
+  <description>Messerschmitt BF-109 G14</description>
+  <author>Detlef Faber</author>
+  <status>production</status>
+  <version>2.2</version>
+ <rating>
+    <FDM type="int">4</FDM>
+    <systems type="int">4</systems>
+    <model type="int">4</model>
+    <cockpit type="int">5</cockpit>
+  </rating>
+  <startup>
+    <splash-texture>Aircraft/bf109/bf109-splash.rgb</splash-texture>
+  </startup>
+  
+  <flight-model>yasim</flight-model>
+  <aero>bf109g-yasim</aero>
+	<failure-manager>
+			<controls-failure-drag type="double">1.0</controls-failure-drag>
+			<controls-failure-roll type="double">0.7</controls-failure-roll>
+			<engines>
+					<engine n="0">
+						<propstrike type="bool">false</propstrike>
+						<propstrike-force type="float">0</propstrike-force>
+					</engine>
+			</engines>
+			<flaps type="bool">false</flaps>
+			<left-wing-torn type="bool">false</left-wing-torn>
+			<right-wing-torn type="bool">false</right-wing-torn>
+			<gear>
+					<gear n="0">
+							<jammed type="bool">false</jammed>
+					</gear>
+					<gear n="1">
+							<jammed type="bool">false</jammed>
+					</gear>
+					<gear n="2">
+							<jammed type="bool">false</jammed>
+					</gear>
+			</gear>
+	</failure-manager>
+  <systems>
+   <electrical>
+    <path>Aircraft/Generic/generic-electrical.xml</path>
+   </electrical>
+  </systems> 
+ 
+  <virtual-cockpit archive="y">true</virtual-cockpit>
+  <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+
+  <sound>
+   <path>Aircraft/bf109/bf109g-sound.xml</path>
+  </sound>
+
+  <submodels> 
+    <serviceable type="bool">true</serviceable>
+    <path>Aircraft/bf109/Models/submodels.xml</path>
+  </submodels>
+
+
+  <model>
+   <path>Aircraft/bf109/Models/Bf-109g.xml</path>
+   <livery>
+		 <trop type="bool">false</trop>
+     <variant type="string">Default</variant>
+     <material>
+			 <cowlunderside>
+			   <texture>Liveries/special.png</texture>
+			 </cowlunderside>
+       <fuselage>
+         <texture>bf109-1.png</texture>
+       </fuselage>
+         <fwdband>
+          <texture>Liveries/special.png</texture>
+         </fwdband>
+				 <prophub>
+          <texture>bf109-1.png</texture>
+				 </prophub>
+         <rearband>
+					<colour>
+					  <diffuse>
+					   <red>0.9</red>
+					   <green>0.0</green>
+					   <blue>0.0</blue>
+					  </diffuse>
+					  <ambient>
+			 			  <red>0.9</red>
+					   <green>0.0</green>
+					   <blue>0.0</blue>
+					  </ambient>
+					  <specular>
+					   <red>0.9</red>
+					   <green>0.0</green>
+					   <blue>0.0</blue>
+					  </specular>
+					  <emission>
+					   <red>0.0</red>
+					   <green>0.0</green>
+					   <blue>0.0</blue>
+					  </emission>
+					  <transparency>
+				   <alpha>1.0</alpha>
+					  </transparency>	
+					  <shininess>2</shininess>
+					</colour>
+
+
+         </rearband>
+				 <rudder>
+          <texture>Liveries/special.png</texture>		
+				 </rudder>
+         <wingtip>
+          <texture>Liveries/special.png</texture>		
+         </wingtip>
+     </material>
+   </livery>
+		<logo>
+			<display type="int" userarchive="y">2</display>
+			<name>FlightGear</name>
+			<texture>../../Generic/Logos/FlightGear.png</texture>
+		</logo>
+   <crew>
+      <pilot>
+        <visible>1.0</visible>
+      </pilot>
+   </crew>
+  </model> 
+	<multiplay>
+		<generic>
+				<float>0</float>
+				<float>1</float>
+				<float>2</float>
+				<float>3</float>
+				<float>4</float>
+				<float>5</float>
+				<float>6</float>
+ 			    <float n="7" alias="/controls/wingfold/position-norm"/>
+ 			    <float n="8" alias="/gear/tailhook/position-norm"/>
+ 			    <float n="9" alias="/controls/engines/engine[0]/cowl-flaps-norm"/>
+ 			    <float n="10" alias="/controls/canopy/position-norm"/>
+ 			    <float n="11" alias="/controls/canopy/release"/>
+ 			    <float n="12" alias="/sim/model/crew/pilot/visible"/>
+ 			    <float n="13" alias="/sim/current-view/view-number"/>
+ 			    <float n="18" alias="/gear/gear[2]/caster-angle-deg"/>
+ 			    <float n="19" alias="/controls/flight/elevator"/>
+
+				<string>0</string>
+				<string n="1">0</string>
+
+	        <int n="0" type="int">  0 </int>  <!-- Dual Control boolean light switches-->
+			<int n="2" alias="/sim/model/lights/beacon/state"/>
+			<int n="3" alias="/sim/model/lights/strobe/state"/>
+			<int n="4" alias="/controls/lighting/nav-lights"/>
+			<int n="5" alias="/controls/lighting/landing-lights"/>
+			<int n="6" alias="/controls/switches/landing-light"/>
+
+		</generic>
+	</multiplay>
+		<tutorials>
+			<tutorial include="Tutorials/startup_tutorial.xml"/>
+		</tutorials>
+  <view n="0">
+   <internal archive="y">true</internal>
+   <config>
+    <x-offset-m archive="y" type="double">0.0</x-offset-m>
+    <y-offset-m archive="y" type="double">0.65</y-offset-m>
+    <z-offset-m archive="y" type="double">0.751</z-offset-m>
+    <pitch-offset-deg>-7.5</pitch-offset-deg>
+   </config>
+  </view>
+
+  <view n="1">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.35</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="2">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.35</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="3">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.35</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="4">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.35</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="5">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.35</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="6">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.35</target-z-offset-m>
+   </config>
+  </view>
+  <view n="7">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.35</target-z-offset-m>
+   </config>
+  </view>
+
+ <autopilot>
+   <config>
+     <min-climb-speed-kt type="float">70.0</min-climb-speed-kt>
+     <best-climb-speed-kt type="float">75.0</best-climb-speed-kt>
+     <target-climb-rate-fpm type="float">500.0</target-climb-rate-fpm>
+     <target-descent-rate-fpm type="float">1000.0</target-descent-rate-fpm>
+     <elevator-adj-factor type="float">4000.0</elevator-adj-factor>
+     <integral-contribution type="float">0.01</integral-contribution>
+     <zero-pitch-throttle type="float">0.45</zero-pitch-throttle>
+     <zero-pitch-trim-full-throttle type="float">0.14</zero-pitch-trim-full-throttle>
+   </config>
+ </autopilot>
+
+		<hud>   
+			<enable3d n="1">false</enable3d>
+		</hud>
+
+    <help>
+    <key>
+      <name>Ctrl-l</name>
+      <desc>toggle Tailwheel Lock</desc>
+    </key>
+    <key>
+      <name>C</name>
+      <desc>toggle Canopy</desc>
+    </key>
+   <key>
+      <name>Ctrl-p</name>
+      <desc>Toggle automatic Propeller Adjustment</desc>
+    </key>
+   <key>
+      <name>N</name>
+      <desc>Propeller Coarse</desc>
+    </key>
+   <key>
+      <name>n</name>
+      <desc>Propeller Fine</desc>
+    </key>
+   <key>
+      <name>l</name>
+      <desc>Livery Select</desc>
+    </key>
+   <key>
+      <name>ctrl-d</name>
+      <desc>Drop (external) Tank</desc>
+    </key>
+   <key>
+      <name>d/D</name>
+      <desc>Toggle Master Arm on/off</desc>
+    </key>
+   <key>
+      <name>e</name>
+      <desc>Fire MG</desc>
+    </key>
+   <key>
+      <name>E</name>
+      <desc>Fire Engine Cannon</desc>
+    </key>
+   <key>
+      <name>ctrl-e</name>
+      <desc>Drop Bomb</desc>
+    </key>
+   <key>
+      <name>H</name>
+      <desc>Fire WGR 21</desc>
+    </key>
+    <key>
+      <name>K</name>
+      <desc>catapult launch command</desc>
+    </key>
+
+    <key>
+      <name>L</name>
+      <desc>launch-bar engage</desc>
+    </key>
+
+    <key>
+      <name>o/O</name>
+      <desc>extend/retract Tailhook</desc>
+    </key>
+<text>Use the Equipment-Fuel and Payload Dialog to select external Stores. l toggles the Livery select Dialog
+
+Some notes on the propeller adjust mechanism:
+
+This is no constant speed unit!
+
+Propeller pitch advance is gouverned by a running line dependent on the engine rpm/manifold pressure relation. There is a lever beneath the throttle quadrant to switch between automatic/manual adjust. Manual is the rear rest of the switch and should be used for startup and taxi.
+
+The actual amount of propeller pitch is displayed on the clock shaped Instrument on the right side of the panel. The range counts counter clockwise starting at 12.30 (full fine) to 8.30 (full course).
+
+---Start up---
+Ensure propeller adjust automatic is set to manual, and the pitch is set to 11.00. Set cutoff lever (right of throttle lever) to open, operate primer (left of seat) 5-6 times. Switch ignition (left side of the panel) to M1+2. Open throttle a bit and pull the starter Handle (beneath Mag-Switch). Be sure to open(offen) the radiator flaps (lever right beneath the panel).
+---Take Off---
+Flaps (the left wheel on the left side of the seat) down 10 degrees, Take off at 1.1 ata Manifold Pressure. When advancing the throttle past 75%  propeller pitch adjustment will engage automatically. Lift Tailwheel at 120-150 km/h. Be prepared to use Aileron against Torque and Rudder to counteract Swing. Lift Off at 190-200 km/h.
+Climb with 1.1 ata (Max Continous Power) 1.3 ata is limited to 30 min. 1.4 ata is limited to 5 min. Radiator flaps can be set to automatic.
+
+---Landing---
+Beware: While engine runs on low rpm (or beneath 0.9 ata manifold pressure), switch automatic propeller adjustment off (Ctrl-p) or else the propeller pitch will run too course. Set propeller pitch to 10.30.
+Lower Flaps and Gear under 300 km/h. Open radiator flaps. Approach Speed is 200 km/h. A curved Approach is recommended, because visibility on Final is bad. Speed at Treshold should be 175 km/h. Flare to Threepoint attitude before touchdown. After Touchdown use Rudder to keep the Aircraft straight.
+Don't forget to release Tailwheel lock (lever on the left cockpitwall) before taxiing off the Runway.
+
+---Take off from a Carrier--  
+"L" to engage, "K" to launch, No Flaps, Full throttle ,.....After climbing to safe altitude reduce throttle before burn engine (1.1 Manfold)
+
+---Landing on Carrier---
+Hook down, full flaps, 100 knots, smooth approach.......150 feet.......
+
+
+
+
+  Enjoy.........
+
+
+
+</text>
+  </help>
+
+
+  <weight n="0">
+      <name>Fuselage</name>
+      <tank>1</tank>
+      <weight-lb>0</weight-lb>
+      <selected>none</selected>
+      <opt>
+					<name>none</name>
+					<lbs>0</lbs>
+			</opt>
+      <opt>
+					<name>Droptank</name>
+		      <lbs>50.0</lbs>
+					<gals>86</gals>
+      </opt>
+      <opt>
+					<name>SC250 Bomb</name>
+		      <lbs>552.0</lbs>
+      </opt>
+      <opt>
+					<name>BC250 Bomb</name>
+		      <lbs>552.0</lbs>
+      </opt>
+      <opt>
+					<name>NC250 Bomb</name>
+		      <lbs>552.0</lbs>
+      </opt>
+  </weight>
+
+  <weight n="1">
+      <name>left Wing</name>
+      <weight-lb type="double">0</weight-lb>
+      <selected>none</selected>
+      <opt><name>none</name><lbs>0</lbs></opt>
+      <opt><name>MG 151 Machine gun</name>
+      <lbs>110.0</lbs>
+      </opt>
+      <opt><name>WGr 21 Rocket</name>
+      <lbs>270.0</lbs>
+      </opt>
+  </weight>
+
+  <weight n="2">
+      <name>right Wing</name>
+      <weight-lb type="double">0</weight-lb>
+      <selected>none</selected>
+      <opt><name>none</name><lbs>0</lbs></opt>
+      <opt><name>MG 151 Machine gun</name>
+      <lbs>110.0</lbs>
+      </opt>
+      <opt><name>WGr 21 Rocket</name>
+      <lbs>270.0</lbs>
+      </opt>
+  </weight>
+	<menubar>
+		<default>
+			<menu n="10">
+				<label>Extras</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Magically start engine</label>
+						<binding>
+							<command>nasal</command>
+							<script>bf109.magicstart();</script>
+						</binding>
+					</item>
+					<item>
+						<label>Select Livery</label>
+              <binding>
+                <command>nasal</command>
+                <script>aircraft.livery.dialog.toggle()</script>
+              </binding>
+					</item>
+				<item>
+						<label>Select Logo</label>
+              <binding>
+                <command>nasal</command>
+                <script>bf109.logo_dialog.toggle()</script>
+              </binding>
+					</item>
+			</menu>
+		</default>
+	</menubar>
+ </sim>
+
+ <engines>
+  <engine>
+   <mp-osi>3.0</mp-osi>
+   <coolant-temp-degc type="float">15.0</coolant-temp-degc>
+   <oiltempc type = "float">15.0</oiltempc>
+   <oil-visc type = "float">0.1</oil-visc>
+	 <oil-press type = "float">0.0</oil-press>
+	 <fuel-press type ="float">0.0</fuel-press>
+   <rev-strain type="int">0</rev-strain>
+   <overrev type="int">0</overrev>
+   <overheat type="int">0</overheat>
+   <rpm type="float">0.0</rpm>
+  </engine>
+ </engines>
+ <velocities>
+   <airspeed-kt type="float">0.0</airspeed-kt>
+ </velocities>
+
+ <consumables>
+  <fuel>
+	 <on-reserve type="int">0</on-reserve>
+   <tank n="0">
+    <name>Internal</name>
+    <selected type="bool">false</selected>
+   </tank>
+   <tank n="1">
+    <name>Droptank</name>
+    <selected type="bool">false</selected>
+   </tank>
+  </fuel>
+ </consumables>
+
+ <!-- set prop for the manual "bookmark" arrow on the remote compas -->
+ <instrumentation>
+    <magnetic-compass>
+       <bookmark-heading-deg type="double">43.0</bookmark-heading-deg>
+    </magnetic-compass>
+ </instrumentation>
+
+ <!-- set up control properties for YASim -->
+ <controls>
+    <lighting>
+      <beacon type="bool">false</beacon>
+      <strobe type="bool">false</strobe>
+      <nav-lights type="bool">false</nav-lights>
+    </lighting>
+	 <armament>
+				<fuse-control type ="bool">false</fuse-control>
+				<gun n="0">
+						<serviceable type="bool">true</serviceable>
+						<fire type="bool">false</fire>
+				</gun>
+		<revi>
+			<shadeup type="bool">false</shadeup>
+		</revi>
+		<station n="0">
+				<fused type="bool">false</fused>
+				<fuse-type type="int">2</fuse-type>
+				<release type="bool">false</release>
+		</station>
+      <trigger type="bool">false</trigger>
+	 </armament>
+	 <canopy>
+			<jetthandle-pulled type="bool">false</jetthandle-pulled>
+			<release type="bool">false</release>
+	 </canopy>
+   <engines>
+      <engine n="0">
+        <magnetos>0</magnetos>
+				<target-mp type="float">0</target-mp>
+        <boost type="float">0.7</boost>
+				<blower type="int">0</blower>
+        <prop-auto type="bool">false</prop-auto>
+				<prop-adjust type="float">1.0</prop-adjust>
+				<fueldump-pulled type="bool">false</fueldump-pulled>
+        <primer type="double">0.0</primer>
+        <primer-pressed type="bool">0.0</primer-pressed>
+        <radlever type="double">0.0</radlever>
+				<throttle-c type="float">0</throttle-c>
+        <cowl-flaps-norm type="float">0.0</cowl-flaps-norm>
+        <coolflap-auto type ="int">0</coolflap-auto>
+				<on-startup-running type="bool">false</on-startup-running>
+      </engine>
+   </engines>
+
+   <gear>
+			<gear n="0">
+					<gear-down type="bool">true</gear-down>
+			</gear>
+			<gear n="1">
+					<gear-down type="bool">true</gear-down>
+			</gear>
+      <tailwheel-lock>true</tailwheel-lock>
+      <brake-parking type="bool">1</brake-parking>
+      <bellybrake type="float">1.0</bellybrake>
+			<emergency-extension type="bool">false</emergency-extension>
+			<emergency-extension-pulled type="bool">false</emergency-extension-pulled>
+   </gear>
+
+   <!-- The Bf 109 has no aileron or rudder trim controls -->
+   <flight>
+      <aileron-trim>0.045</aileron-trim>
+   </flight>
+
+
+
+   <fuel>
+     <jett type="int">0</jett>
+     <switch-position type = "int">-1</switch-position>
+     <tank n="0">
+       <fuel_selector>true</fuel_selector>
+     </tank>
+     <tank n="1">
+       <fuel_selector>true</fuel_selector>
+     </tank>  
+   </fuel>
+
+
+ </controls>
+
+ <!-- Map Keys -->
+ <input>
+    <keyboard>
+      <key n="12"> 
+          <name>Ctrl-L</name>
+          <desc>Toggle Tailwheel Lock.</desc>
+          <binding> 
+            <command>property-toggle</command>
+            <property>controls/gear/tailwheel-lock</property>
+          </binding>
+      </key>
+      <key n="16"> 
+          <name>Ctrl-P</name>
+          <desc>Toggle automatic Propeller adjustment.</desc>
+          <binding> 
+            <command>property-toggle</command>
+            <property>/controls/engines/engine[0]/prop-auto</property>
+          </binding>
+      </key>
+      <key n="67">
+        <name>C</name>
+        <desc>Toggle Canopy</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>bf109.toggle_canopy()</script>
+        </binding>
+      </key>
+
+      <key n="68">
+        <name>D</name>
+        <desc>Toggle Revi</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>bf109.toggle_revi()</script>
+        </binding>
+      </key>
+
+		  <key n="110">
+ 		 	 <name>n</name>
+ 			 <desc>Propeller Finer</desc>
+ 			 <repeatable type="bool">true</repeatable>
+		   <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[0]/propeller-adjust</property>
+          <step type="double">0.01</step>
+          <min type="double">0</min>
+          <max type="double">1</max>
+  		 </binding>
+ 			</key>
+ 			<key n="78">
+  			<name>N</name>
+  			<desc>Propeller Coarser</desc>
+  			<repeatable type="bool">true</repeatable>
+  			<binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[0]/propeller-adjust</property>
+          <step type="double">-0.01</step>
+          <min type="double">0</min>
+          <max type="double">1</max>
+  			</binding>
+ 			</key>
+
+      <key n="4">
+        <name>Ctrl-d</name>
+        <desc>drop Tank</desc>
+        <binding>
+          <command>nasal</command>
+          <script>bf109.drop_tank()</script>
+        </binding>
+      </key>  
+      <key n="100"> 
+        <name>d</name>
+        <desc>Toggle Master Arm on</desc>
+        <binding> 
+          <command>property-adjust</command>
+          <property>/controls/armament/master-arm</property>
+          <step type="double">1</step>
+          <min type="double">0</min>
+          <max type="double">1</max>
+        </binding>
+      </key>
+      <key n="68"> 
+        <name>D</name>
+        <desc>Toggle Master Arm off</desc>
+        <binding> 
+          <command>property-adjust</command>
+          <property>/controls/armament/master-arm</property>
+          <step type="double">-1</step>
+          <min type="double">0</min>
+          <max type="double">1</max>
+        </binding>
+      </key>
+      <key n="101">
+        <name>e</name>
+        <desc>Fire MG</desc>
+        <binding>
+          <command>nasal</command>
+          <script>bf109.fire_MG()</script>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>nasal</command>
+            <script>bf109.stop_MG()</script>
+          </binding>
+        </mod-up>
+      </key>
+
+      <key n="69">
+        <name>E</name>
+        <desc>fire engine Cannon</desc>
+        <binding>
+          <command>nasal</command>
+          <script>bf109.fire_cannon()</script>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>nasal</command>
+            <script>bf109.stop_cannon()</script>
+          </binding>
+        </mod-up>
+      </key>
+
+      <key n="5">
+        <name>Ctrl-e</name>
+        <desc>drop Center Load</desc>
+        <binding>
+          <command>nasal</command>
+          <script>weapons.drop_bomb()</script>
+        </binding>
+      </key>  
+      <key n="102">
+        <name>f</name>
+        <desc>fuel tank select</desc>
+        <binding>
+        <command>nasal</command>
+        <script>bf109.fuel_switch()</script>
+  </binding>
+  </key> 
+
+      <key n="72">
+        <name>H</name>
+        <desc>Fire WGr 21</desc>
+          <binding n="0">
+          <command>nasal</command>
+          <script>bf109.fire_wgr()</script>
+        </binding>
+      </key>
+     <key n="115">
+      <name>s</name>
+      <binding>
+        <command>nasal</command>
+        <script>bf109.starter(1)</script>
+      </binding>
+      <mod-up>
+       <binding>
+         <command>nasal</command>
+         <script>bf109.starter(0)</script>
+       </binding>
+      </mod-up>
+ 	</key> 
+        <!-- map keys for catapult launch -->
+        <key n="75"> 
+          <name>K</name>
+          <desc>Catapult Launch Command.</desc>
+          <binding> 
+            <command>property-toggle</command>
+            <property>/controls/gear/catapult-launch-cmd</property>
+          </binding>
+        </key>
+        <!-- map keys for launch-bar -->
+        <key n="76"> 
+          <name>L</name>
+          <desc>Launch-bar engage.</desc>
+          <binding> 
+            <command>property-toggle</command>
+            <property>/controls/gear/launchbar</property>
+          </binding>
+        </key>
+        <key n="111"> 
+          <name>o</name>
+          <desc>Hook down.</desc>
+          <binding> 
+            <command>property-assign</command>
+            <property>controls/gear/tailhook</property>    <selected type="bool">false</selected>
+            <value type="double">1.0</value>
+          </binding>
+        </key>
+        <key n="79"> 
+          <name>O</name>
+          <desc>Hook Up.</desc>
+          <binding> 
+            <command>property-assign</command>
+            <property>controls/gear/tailhook</property>
+            <value type="double">0.0</value>
+          </binding>
+        </key>
+ </keyboard>
+ </input>
+
+<!-- Nasal files/scripts -->
+  <nasal>
+    <bf109>
+      <file>Aircraft/bf109/Nasal/bf109.nas</file>
+      <file>Aircraft/bf109/Nasal/light.nas</file>
+    </bf109>
+		<weapons>
+				<file>Aircraft/bf109/Nasal/weapons.nas</file>
+		</weapons>
+		<failure>
+			<file>Aircraft/bf109/Nasal/failure.nas</file>
+		</failure>
+  </nasal>
+
+
+</PropertyList>
+
+
+
+
