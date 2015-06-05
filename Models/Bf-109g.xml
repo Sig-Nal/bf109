@@ -456,7 +456,7 @@
   <type>rotate</type>
   <object-name>rightaileron</object-name>
         <property>surface-positions/right-aileron-pos-norm</property>
-  <factor>-15.0</factor>
+  <factor>15.0</factor>
 
   <center>
    <x-m>3.27000</x-m>
