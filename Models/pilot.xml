@@ -181,7 +181,6 @@
   <object-name>arm1.R</object-name>
   <object-name>arm2.R</object-name>
   <object-name>hand.R</object-name>
-    <property>sim/multiplay/generic/float[19]</property>
   <factor>18</factor>
 
   <center>
@@ -200,7 +199,6 @@
   <type>rotate</type>
   <object-name>arm2.R</object-name>
   <object-name>hand.R</object-name>
-    <property>sim/multiplay/generic/float[19]</property>
   <factor>-27</factor>
 
   <center>
@@ -219,7 +217,6 @@
  <animation>
   <type>rotate</type>
   <object-name>hand.R</object-name>
-  <property>sim/multiplay/generic/float[19]</property>
   <factor>-8</factor>
 
   <center>
