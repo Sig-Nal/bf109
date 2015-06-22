@@ -386,12 +386,12 @@
    <y1-m>-1.407</y1-m>
    <z1-m>-0.256</z1-m>
 
-
    <x2-m>3.759</x2-m>
    <y2-m>-0.596</y2-m>
    <z2-m>-0.313</z2-m>
   </axis>
  </animation>
+
 <animation>
   <type>rotate</type>
   <object-name>rightflap</object-name>
@@ -702,7 +702,7 @@
   <object-name>pilot</object-name>
   <condition>
    <greater-than>
-  <property>sim/multiplay/generic/float[13]</property>
+  <property>sim/multiplay/generic/float[12]</property>
     <value>0.0</value>
    </greater-than>
   </condition>
