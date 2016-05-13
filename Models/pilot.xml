@@ -1,237 +1,337 @@
-<?xml version="1.0"?>
-  <PropertyList> 
-    <path>pilot-b.ac</path>
-    
-<!-- default position -->
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>PilotYakSub.ac</path>
+
+  <animation>
+     <type>select</type>
+    <object-name>Tors</object-name>
+    <object-name>Lock</object-name>
+    <object-name>Korpus</object-name>
+    <object-name>Arm1L</object-name>
+    <object-name>Arm2L</object-name>
+    <object-name>Arm3L</object-name>
+    <object-name>Arm1R</object-name>
+    <object-name>Arm2R</object-name>
+    <object-name>Arm3R</object-name>
+    <object-name>Leg1L</object-name>
+    <object-name>Leg2L</object-name>
+    <object-name>BootL</object-name>
+    <object-name>Leg1R</object-name>
+    <object-name>Leg2R</object-name>
+    <object-name>BootR</object-name>
+    <object-name>Harness</object-name>
+    <condition>
+	<or>
+	<and>
+     <greater-than>	
+     <property>sim/multiplay/generic/int[7]</property>
+     <value>0</value>
+     </greater-than>	 
+     <less-than>	 
+     <property>sim/multiplay/generic/int[7]</property>
+     <value>8</value>
+     </less-than>	 
+     </and>
+	 <equals>
+     <property>sim/multiplay/generic/int[7]</property>
+     <value>10</value>
+	 </equals>
+	 </or>
+  </condition>
+  </animation>
+  
+
+   <animation>
+     <type>select</type>
+    <object-name>Head</object-name>	 
+    <condition>
+	<and>
+     <greater-than>	
+     <property>sim/multiplay/generic/int[7]</property>
+     <value>0</value>
+     </greater-than>	 
+     <less-than>	 
+     <property>sim/multiplay/generic/int[7]</property>
+     <value>8</value>
+     </less-than>	 
+     </and>     
+  </condition>
+  </animation>
+
+  
+
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Head</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> -12 </factor> 
+    <center>
+      <x-m>  0.40 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m>  0.50 </z-m>
+    </center>
+    <axis>
+      <x> 0.000 </x>
+      <y> 1.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Head</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor>-25</factor>
+    <center>
+      <x-m>  0.40 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m>  0.50 </z-m>
+    </center>
+    <axis>
+      <x> 0.000 </x>
+      <y> 0.000 </y>
+      <z> 1.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Head</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> -10.0</factor>
+    <center>
+      <x-m>  0.40 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.50 </z-m>
+    </center>
+    <axis>
+      <x> 1.000 </x>
+      <y> 0.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation> 
+
+  
+<!-- Feet animations right -->
+   <animation>
+    <type>translate</type>
+    <object-name>BootR</object-name>
+	<object-name>Leg2R</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor>-0.10</factor>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>Leg2R</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor>10.0</factor>	
+    <center>
+      <x-m>-0.39</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.21</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Leg1R</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor>-10.0</factor>	
+    <center>
+      <x-m>0.33</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.04</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+  
+  
+<!-- Feet animations left --> 
+ 
+   <animation>
+    <type>translate</type>
+    <object-name>BootL</object-name>
+	<object-name>Leg2L</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor>0.10</factor>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>Leg2L</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor>-10.0</factor>
+    <center>
+      <x-m>-0.39</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.21</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Leg1L</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor>10.0</factor>
+    <center>
+      <x-m>0.33</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.04</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+  
 
 
+<!-- Left arm animations -->
 
-<!-- arms -->
+  <animation>
+    <type>translate</type>
+    <object-name>Arm3L</object-name>
+    <object-name>Arm2L</object-name>	
+    <property>sim/multiplay/generic/float[7]</property>	
+    <factor>-0.14</factor>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Arm1L</object-name>
+    <property>sim/multiplay/generic/float[7]</property>
+    <factor>30.0</factor>
+    <center>
+      <x-m>0.36</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.42</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
  <animation>
-  <type>rotate</type>
-  <object-name>arm1.R</object-name>
-  <object-name>arm2.R</object-name>
-  <object-name>hand.R</object-name>
-  <property>/sim/model/crew/pilot/visible</property>
-  <factor>90</factor>
-  <center>
-   <x-m>0.08</x-m>
-   <y-m>0.2</y-m>
-   <z-m>0.45</z-m>
-  </center>
-  <axis>
-   <x>-1.0</x>
-   <y>0.2</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>arm2.R</object-name>
-  <object-name>hand.R</object-name>
-  <property>/sim/model/crew/pilot/visible</property>
-  <factor>90</factor>
-  <center>
-   <x-m>0.007</x-m>
-   <y-m>0.533</y-m>
-   <z-m>0.455</z-m>
-  </center>
-  <axis>
-   <x>0.0</x>
-   <y>-0.5</y>
-   <z>1.0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>arm1.L</object-name>
-  <object-name>arm2.L</object-name>
-  <object-name>hand.L</object-name>
-  <property>/sim/model/crew/pilot/visible</property>
-  <factor>90</factor>
-  <center>
-   <x-m>0.08</x-m>
-   <y-m>-0.2</y-m>
-   <z-m>0.45</z-m>
-  </center>
-  <axis>
-   <x>1.0</x>
-   <y>0.2</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>arm2.L</object-name>
-  <object-name>hand.L</object-name>
-  <property>/sim/model/crew/pilot/visible</property>
-  <factor>90</factor>
-  <center>
-   <x-m>0.007</x-m>
-   <y-m>-0.533</y-m>
-   <z-m>0.455</z-m>
-  </center>
-  <axis>
-   <x>0.0</x>
-   <y>-0.5</y>
-   <z>-1.0</z>
-  </axis>
- </animation>
+    <type>rotate</type>
+    <object-name>Arm2L</object-name>
+    <property>sim/multiplay/generic/float[7]</property>
+    <factor>-10.0</factor>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.14</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
 
 
-<!-- legs -->
- <animation>
-  <type>rotate</type>
-  <object-name>leg1.R</object-name>
-  <object-name>leg2.R</object-name>
-  <object-name>foot.R</object-name>
-  <property>/sim/model/crew/pilot/visible</property>
-  <factor>80</factor>
-  <center>
-   <x-m>0.012</x-m>
-   <y-m>0.199</y-m>
-   <z-m>-0.016</z-m>
-  </center>
-  <axis>
-   <x>0.0</x>
-   <y>0.6</y>
-   <z>0.0</z>
-  </axis>
- </animation>
+<!-- Right arm animations -->
 
- <animation>
-  <type>rotate</type>
-  <object-name>leg2.R</object-name>
-  <object-name>foot.R</object-name>
-  <property>/sim/model/crew/pilot/visible</property>
-  <factor>40</factor>
-  <center>
-   <x-m>-0.064</x-m>
-   <y-m>0.109</y-m>
-   <z-m>-0.35</z-m>
-  </center>
-  <axis>
-   <x>0.0</x>
-   <y>-0.1</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>leg1.L</object-name>
-  <object-name>leg2.L</object-name>
-  <object-name>foot.L</object-name>
-  <property>/sim/model/crew/pilot/visible</property>
-  <factor>80</factor>
-  <center>
-   <x-m>0.012</x-m>
-   <y-m>-0.199</y-m>
-   <z-m>-0.016</z-m>
-  </center>
-  <axis>
-   <x>0.0</x>
-   <y>0.6</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>leg2.L</object-name>
-  <object-name>foot.L</object-name>
-  <property>/sim/model/crew/pilot/visible</property>
-  <factor>40</factor>
-  <center>
-   <x-m>-0.064</x-m>
-   <y-m>-0.109</y-m>
-   <z-m>-0.35</z-m>
-  </center>
-  <axis>
-   <x>0.0</x>
-   <y>-0.1</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
-<!-- head -->
- <animation>
-  <type>rotate</type>
-  <object-name>head</object-name>
-  <property>/sim/model/crew/pilot/visible</property>
-  <factor>10</factor>
-  <center>
-   <x-m>0.055</x-m>
-   <y-m>0.0</y-m>
-   <z-m>0.563</z-m>
-  </center>
-  <axis>
-   <x>0.0</x>
-   <y>-1.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
-<!-- movement -->
- <animation>
-  <type>rotate</type>
-  <object-name>arm1.R</object-name>
-  <object-name>arm2.R</object-name>
-  <object-name>hand.R</object-name>
-    <property>sim/multiplay/generic/float[19]</property>
-  <factor>18</factor>
-
-  <center>
-   <x-m>0.027</x-m>
-   <y-m>-0.183</y-m>
-   <z-m>0.513</z-m>
-  </center>
-  <axis>
-   <x>0.0</x>
-   <y>1.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>arm2.R</object-name>
-  <object-name>hand.R</object-name>
-    <property>sim/multiplay/generic/float[19]</property>
-  <factor>-27</factor>
-
-  <center>
-   <x-m>-0.153</x-m>
-   <y-m>-0.184</y-m>
-   <z-m>0.197</z-m>
-  </center>
-  <axis>
-   <x>0.0</x>
-   <y>1.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>Arm3R</object-name>
+    <object-name>Arm2R</object-name>	
+    <property>surface-positions/elevator-pos-norm</property>	
+    <factor>-0.08</factor>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
 
 
- <animation>
-  <type>rotate</type>
-  <object-name>hand.R</object-name>
-  <property>sim/multiplay/generic/float[19]</property>
-  <factor>-8</factor>
 
-  <center>
-   <x-m>-0.38</x-m>
-   <y-m>-0.112</y-m>
-   <z-m>0.321</z-m>
-  </center>
-  <axis>
-   <x>0.0</x>
-   <y>1.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>Arm1R</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor>14</factor>
+    <center>
+      <x-m>0.36</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.42</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
 
-  </PropertyList>
+ 
+   <animation>
+    <type>translate</type>
+    <object-name>Arm3R</object-name>
+    <object-name>Arm2R</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor>0.048</factor>
+     <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Arm1R</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor>7</factor>
+    <center>
+      <x-m>0.36</x-m>
+      <y-m>0.23</y-m>
+      <z-m>0.42</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  
+</PropertyList>
+

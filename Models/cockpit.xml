@@ -504,6 +504,17 @@
       <heading-deg>0</heading-deg>
     </offsets>
   </model>
+
+ <model>
+    <path>Aircraft/bf109/Models/Instruments/tnv-50/tnv-50.xml</path>
+  <offsets>
+   <x-m>3.07</x-m>
+   <y-m>0.26</y-m>
+   <z-m>0.3</z-m>
+      <heading-deg>-20</heading-deg>
+  </offsets>
+  </model>
+
 </PropertyList>
 
 <!-- x: längsachse -->

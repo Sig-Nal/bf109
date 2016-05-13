@@ -14,7 +14,7 @@ February 2006,  Detlef Faber
   <description>Messerschmitt BF-109 G14</description>
   <author>Detlef Faber</author>
   <status>production</status>
-  <version>2.2</version>
+  <version>2.3</version>
  <rating>
     <FDM type="int">4</FDM>
     <systems type="int">4</systems>
@@ -144,7 +144,7 @@ February 2006,  Detlef Faber
 				<float>2</float>
 				<float>3</float>
 				<float>4</float>
-				<float>5</float>
+				<float n="5" alias="/controls/engines/engine[0]/throttle" />
 				<float>6</float>
  			    <float n="7" alias="/controls/wingfold/position-norm"/>
  			    <float n="8" alias="/gear/tailhook/position-norm"/>
@@ -165,6 +165,8 @@ February 2006,  Detlef Faber
 			<int n="4" alias="/controls/lighting/nav-lights"/>
 			<int n="5" alias="/controls/lighting/landing-lights"/>
 			<int n="6" alias="/controls/switches/landing-light"/>
+            <int n="7" alias="/sim/current-view/view-number"/>
+			<int n="12" alias="/engines/engine[0]/running"/>
 
 		</generic>
 	</multiplay>
@@ -489,6 +491,7 @@ Hook down, full flaps, 100 knots, smooth approach.......150 feet.......
 	 <canopy>
 			<jetthandle-pulled type="bool">false</jetthandle-pulled>
 			<release type="bool">false</release>
+            <position-norm type="float">1.0</position-norm>
 	 </canopy>
    <engines>
       <engine n="0">

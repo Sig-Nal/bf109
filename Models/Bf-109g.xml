@@ -691,9 +691,9 @@
 	  <name>pilot</name>
    <nopreview/>
       <offsets> 
-        <x-m>3.6</x-m>
+        <x-m>3.3</x-m> <!-- 3.6 ori-->
         <y-m>0.0</y-m>
-        <z-m>-0.08</z-m>
+        <z-m>0.10</z-m> <!-- -0.08 ori-->
         <pitch-deg>22</pitch-deg>
       </offsets>
     </model>
@@ -1123,5 +1123,37 @@
   </offsets>
  </model>
 
+  <!-- smokengine -->
+  
+  <model>
+    <path>Aircraft/bf109/Models/Effects/smokengine/smoke.xml</path>
+    <offsets>
+   <x-m>1.8</x-m>
+   <y-m>0.4</y-m>
+   <z-m>-0.16</z-m>
+	 <heading-deg>40</heading-deg>
+	 <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/bf109/Models/Effects/smokengine/smoke2.xml</path>
+    <offsets>
+   <x-m>1.8</x-m>
+   <y-m>-0.4</y-m>
+   <z-m>-0.16</z-m>
+	 <heading-deg>45</heading-deg>
+	 <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/bf109/Models/Effects/smokengine/smoke3.xml</path>
+    <offsets>
+   <x-m>1.8</x-m>
+   <y-m>0.4</y-m>
+   <z-m>-0.16</z-m>
+	 <heading-deg>55</heading-deg>
+	 <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
 </PropertyList>
 
